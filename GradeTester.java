@@ -16,7 +16,14 @@ hint: use the nextLine() method from the Scanner class
 
 GradeCalculator i = new GradeCalculator();
 
-Scanner scn = new Scanner(new File(args[0]));
+try{
+    Scanner scn = new Scanner(new File(args[0]));
+}
+
+catch (FileNotFoundException ex){
+    System.out.println("No file found");
+    return;
+}
 
 i.parseInput(scn.nextLine());
 
