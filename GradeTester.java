@@ -16,9 +16,9 @@ hint: use the nextLine() method from the Scanner class
 
 Scanner scn = new Scanner(new File(args[0]));
 
-parseInput(scn.nextLine());
+GradeCalculator.parseInput(scn.nextLine());
 
-System.out.println(getLabGrade());
+System.out.println(GradeCalculator.getLabGrade());
 
 // your code here
 
