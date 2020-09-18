@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 
 public class GradeTester{
     
@@ -14,9 +16,9 @@ hint: use the nextLine() method from the Scanner class
 
 Scanner scn = new Scanner(new File(args[0]));
 
-GradeCalculator.parseInput(scn.nextLine());
+parseInput(scn.nextLine());
 
-System.out.println(GradeCalculator.getLabGrade());
+System.out.println(getLabGrade());
 
 // your code here
 
