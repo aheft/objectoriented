@@ -76,7 +76,6 @@ public class GradeCalculator{
             sum+= assignmentGrades.get(i) * ceGrades.get(i);
         }
 
-        System.out.println(sum/length);
         return (sum/length);
 
     }
@@ -85,11 +84,11 @@ public class GradeCalculator{
         /* returns the lab grade combined with the independent studies grade*/
 
         return (labTotal*selfStudyAverage);
-
+        
     }
 
     public double getFinalCourseGrade(){
-        return((getHomeworkGrade()*0.5)+(getLabGrade()*0.2)+(finalExam*0.3));
+        return((getHomeworkGrade()*0.5)+(getLabGrade())+(finalExam));
     }
 
     public void parseInput(String inputLine){
