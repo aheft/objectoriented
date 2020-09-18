@@ -19,7 +19,7 @@ GradeCalculator i = new GradeCalculator();
 Scanner scn; 
 
 try{
-    scn = new Scanner(argv[0]);
+    scn = new Scanner(args[0]);
 }
 
 catch (FileNotFoundException ex){
