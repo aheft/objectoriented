@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.io.*;
 
 public class GradeCalculator{
     /* private member variables.  Do not change these*/
@@ -75,6 +76,7 @@ public class GradeCalculator{
             sum+= assignmentGrades.get(i) * ceGrades.get(i);
         }
 
+        System.out.println(sum/length);
         return (sum/length);
 
     }
