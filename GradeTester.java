@@ -16,8 +16,10 @@ hint: use the nextLine() method from the Scanner class
 
 GradeCalculator i = new GradeCalculator();
 
+Scanner scn; 
+
 try{
-    Scanner scn = new Scanner(new File(args[0]));
+    scn = new Scanner(new File(args[0]));
 }
 
 catch (FileNotFoundException ex){
