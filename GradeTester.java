@@ -18,14 +18,7 @@ GradeCalculator i = new GradeCalculator();
 
 Scanner scn; 
 
-try{
-    scn = new Scanner(args[0]);
-}
-
-catch (FileNotFoundException ex){
-    System.out.println("No file found");
-    return;
-}
+scn = new Scanner(args[0]);
 
 i.parseInput(scn.nextLine());
 
