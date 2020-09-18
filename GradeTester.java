@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import GradeCalculator.java;
 
 public class GradeTester{
     
