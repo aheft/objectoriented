@@ -16,9 +16,9 @@ public class GradeCalculator{
         /* this is an example of how to add things to an array list
         but it is not a complete method.  You will need to finish it*/
 
-        GradeCalculator.assignmentGrades.add(a1);
-        GradeCalculator.assignmentGrades.add(a2);
-        GradeCalculator.assignmentGrades.add(a3);
+        assignmentGrades.add(a1);
+        assignmentGrades.add(a2);
+        assignmentGrades.add(a3);
  
     }
 
@@ -27,28 +27,28 @@ public class GradeCalculator{
         /*this is similar to the setAssignmentGrades method*/
 
 
-        GradeCalculator.ceGrades.add(s1);
-        GradeCalculator.ceGrades.add(s2);
-        GradeCalculator.ceGrades.add(s3);
+        ceGrades.add(s1);
+        ceGrades.add(s2);
+        ceGrades.add(s3);
         
     }
 
 
     private void  setFinalExamGrade(double grade){
 
-        GradeCalculator.finalExam = grade;
+        finalExam = grade;
 
     }
 
     private  void setLabTotal(double grade){
    
-        GradeCalculator.labTotal = grade;
+        labTotal = grade;
 
     }
 
     private  void setSelfStudyAverage(double grade){
       
-        GradeCalculator.selfStudyAverage = grade;
+        selfStudyAverage = grade;
 
     }
 
@@ -61,18 +61,18 @@ public class GradeCalculator{
 
         int length;
 
-        if (GradeCalculator.assignmentGrades.size()>GradeCalculator.ceGrades.size()){
-            length = GradeCalculator.ceGrades.size();
+        if (assignmentGrades.size()>ceGrades.size()){
+            length = ceGrades.size();
         }
 
         else{
-            length = GradeCalculator.assignmentGrades.size();
+            length = assignmentGrades.size();
         }
 
         double sum=0;
 
         for (int i=0; i<length; i++){
-            sum+= GradeCalculator.assignmentGrades.get(i) * GradeCalculator.ceGrades.get(i);
+            sum+= assignmentGrades.get(i) * ceGrades.get(i);
         }
 
         return (sum/length);
@@ -82,12 +82,12 @@ public class GradeCalculator{
     private double getLabGrade(){
         /* returns the lab grade combined with the independent studies grade*/
 
-        return (GradeCalculator.labTotal*GradeCalculator.selfStudyAverage);
+        return (labTotal*selfStudyAverage);
 
     }
 
     public double getFinalCourseGrade(){
-        return((GradeCalculator.getHomeworkGrade()*0.5)+(GradeCalculator.getLabGrade()*0.2)+(GradeCalculator.finalExam*0.3));
+        return((getHomeworkGrade()*0.5)+(getLabGrade()*0.2)+(finalExam*0.3));
     }
 
     public void parseInput(String inputLine){
