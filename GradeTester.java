@@ -14,11 +14,13 @@ get the final grade from the grade calculator- printing it to standard out
 hint: use the nextLine() method from the Scanner class
 */
 
+GradeCalculator i = new GradeCalculator();
+
 Scanner scn = new Scanner(new File(args[0]));
 
-GradeCalculator.parseInput(scn.nextLine());
+i.parseInput(scn.nextLine());
 
-System.out.println(GradeCalculator.getLabGrade());
+System.out.println(i.getLabGrade());
 
 // your code here
 
