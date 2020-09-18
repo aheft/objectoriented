@@ -20,7 +20,7 @@ Scanner scn = new Scanner(new File(args[0]));
 
 i.parseInput(scn.nextLine());
 
-System.out.println(i.getLabGrade());
+System.out.println(i.getFinalCourseGrade());
 
 // your code here
 
