@@ -3,9 +3,9 @@ import java.io.*;
 
 public class Test{
     public static void main(String[] args){
-        Point test=new Point(5, 10, 20);
-        System.out.println(test.x);
-        System.out.println(test.y);
-        System.out.println(test.z);
+        Euclidean test2=new Euclidean();
+        test2.initPoints(2, 4, 6, 1, 2, 3);
+        double dist=test2.calculateDistance();
+        System.out.println(dist);
     }
 }
