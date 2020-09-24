@@ -6,9 +6,14 @@ public class Point {
     // A constructor to initialize the fields and any required getter and setter
     // methods.
     
-    public Point(int x, int y, int z){
+    double x;
+    double y;
+    double z;
+
+
+    public Point(double x, double y, double z){
         this.x=x;
         this.y=y;
         this.z=z;
     }
- }
+}
