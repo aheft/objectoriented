@@ -1,5 +1,6 @@
 import java.util.*;
 import java.io.*;
+import java.lang.Math;
 
 public class Euclidean {
 
@@ -28,6 +29,12 @@ public class Euclidean {
      */
     public double calculateDistance() {
         //TODO:
-        return 0.0;
+        double a=p1.getx()-p2.getx();
+        a=a*a;
+        double b=p1.gety()-p2.gety();
+        b=b*b;
+        double c=p1.getz()-p2.getz();
+        c=c*c;
+        return Math.sqrt(a+b+c);
     }
 }
