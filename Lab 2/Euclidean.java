@@ -7,8 +7,15 @@ public class Euclidean {
      * Initialize two Point objects with 3 points each; (a1, b1, c1) and (a2, b2, c2)
      * You will need to add Point member variables to the class that you initialize here
      */
+
+
+    Point p1;
+    Point p2;
+
     public void initPoints(double a1, double b1, double c1, double a2, double b2, double c2) {
         //TODO:
+        p1=new Point(a1, b1, c1);
+        p2=new Point(a2, b2, c2);
     }
 
     /**

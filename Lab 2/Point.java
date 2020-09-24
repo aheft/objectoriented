@@ -16,4 +16,32 @@ public class Point {
         this.y=y;
         this.z=z;
     }
+
+    public double getx(){
+        return this.x;
+    }
+
+    public double gety(){
+        return this.y;
+    }
+
+    public double getz(){
+        return this.z;
+    }
+
+    public void setx(double x){
+        this.x=x;
+        return;
+    }
+
+    public void sety(double y){
+        this.y=y;
+        return;
+    }
+
+    public void setz(double z){
+        this.z=z;
+        return;
+    }
+
 }
