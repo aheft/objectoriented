@@ -2,6 +2,9 @@ package rogue;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
+import java.util.Iterator;
 
 
 import java.io.FileNotFoundException;
@@ -18,24 +21,24 @@ import org.json.simple.parser.ParseException;
 
 public class A1Solution{
 
-
-
-
     public static void main(String[] args) { 
         // Hardcoded configuration file location/name
         String configurationFileLocation = "fileLocations.json";  //please don't change this for this version of the assignment
         
  // reading the input file locations using the configuration file
         JSONParser parser = new JSONParser();
+        String rooms = new String();
+        String symbols = new String();
         try {
 
             Object obj = parser.parse(new FileReader(configurationFileLocation));
             JSONObject configurationJSON = (JSONObject) obj;
-            String roomPath= configurationJSON.getJsonString("Rooms");
-            String symbolsPath= configurationJSON.getJsonString("Symbols");
-            //Read JSON file
-            Object roomObj = parser.parse(new FileReader(roomPath));
-            Object symbolsObj = parser.parse(new FileReader(symbolsPath));
+            
+            rooms = configurationJSON.get("Rooms").toString();
+            symbols = configurationJSON.get("Symbols").toString();
+            
+
+
             // Extract the Rooms value from the file to get the file location for rooms
             
 
@@ -48,10 +51,23 @@ public class A1Solution{
             e.printStackTrace();
         } catch (ParseException e) {
             e.printStackTrace();
+        } catch (NullPointerException e) {
+
         }
 
 // instantiate a new Rogue object and call methods to do the required things
-        System.out.println("We have liftoff!");
+        
+        ArrayList<Item> allItems = new ArrayList<Item>();
+        Rogue r = new Rogue();
+        Player p = new Player();
+        p.setName("Megh");
+        r.setPlayer(p);
+        r.createRooms(rooms);
+        r.setSymbols(symbols);
+        allItems = r.getItems();
+        ArrayList<Room> allRooms = r.getRooms();
+
+        System.out.println(r.displayAll());
         
     }
 
