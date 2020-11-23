@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+
+
+
+
+run { 
+    standardInput = System.in 
+}
+
+
+
+
+application {
+    mainClassName = "RunMe"
+}

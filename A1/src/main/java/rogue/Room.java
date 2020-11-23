@@ -38,12 +38,9 @@ public class Room  {
 
    // Required getter and setters below
 
- 
   public int getWidth() {
-
     return this.width;
   }
-
  
   public void setWidth(int newWidth) {
     this.width = newWidth;
@@ -51,10 +48,8 @@ public class Room  {
 
  
   public int getHeight() {
-
     return this.height;
   }
-
 
   public void setHeight(int newHeight) {
     this.height = newHeight;
@@ -62,31 +57,23 @@ public class Room  {
 
   public int getId() {
     return this.id;
-
   }  
-
 
   public void setId(int newId) {
     this.id = newId;
   }
 
-
   public ArrayList<Item> getRoomItems() {
     return this.roomItems;
-
   }
-
 
   public void setRoomItems(ArrayList<Item> newRoomItems) {
     this.roomItems = roomItems;
   }
 
-
   public Player getPlayer() {
     return this.player;
-
   }
-
 
   public void setPlayer(Player newPlayer) {
     this.player = newPlayer;
@@ -107,12 +94,6 @@ public class Room  {
   public String getSymbolMap() {
     return symbol;
   }
-
-
-
- 
-
-
 
   public int getDoor(String direction){
     if (direction.equals("N")) {
@@ -135,7 +116,6 @@ public class Room  {
     this.direction = direction;
   }
 
-
 /*
 direction is one of NSEW
 location is a number between 0 and the length of the wall
@@ -153,9 +133,7 @@ location is a number between 0 and the length of the wall
     }
   }
 
-
   public boolean isPlayerInRoom() {
-
     return start;
   }
 
@@ -191,8 +169,8 @@ location is a number between 0 and the length of the wall
         } else {
           arr[i][j] = '.';
         }
-        for (int x = 0; x < roomItems.size(); x++) {
-          if ((int)roomItems.get(x).getXyLocation().getX() == j && (int)roomItems.get(x).getXyLocation().getY() == i) {
+        for (int k = 0; k < roomItems.size(); k++) {
+          if ((int)roomItems.get(k).getXyLocation().getX() == j && (int)roomItems.get(k).getXyLocation().getY() == i) {
             arr[i][j] = '*';
           }
         }
@@ -205,15 +183,6 @@ location is a number between 0 and the length of the wall
       }
       str += '\n';
     }
-
     return str;
   }
-
-
-
 }
-
-
-
-
-

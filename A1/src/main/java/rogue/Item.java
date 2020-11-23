@@ -31,7 +31,6 @@ public class Item  {
 
     public int getId() {
         return this.id;
-       
     }
 
 
@@ -52,7 +51,6 @@ public class Item  {
 
     public String getType() {
         return type;
-
     }
 
 
@@ -63,7 +61,6 @@ public class Item  {
 
     public Character getDisplayCharacter() {
         return newDisplayCharacter;
-        
     }
 
 
@@ -74,7 +71,6 @@ public class Item  {
 
     public String getDescription() {
         return newDescription;
-     
     }
 
 
@@ -85,7 +81,6 @@ public class Item  {
 
     public Point getXyLocation() {
         return xyLocation;  
-     
     }
 
     
@@ -96,7 +91,6 @@ public class Item  {
 
     public Room getCurrentRoom() {
         return newCurrentRoom;
-        
     }
 
 

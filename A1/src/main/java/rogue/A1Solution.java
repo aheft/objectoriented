@@ -1,18 +1,13 @@
 package rogue;
-
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 import java.util.Iterator;
-
-
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-
 import java.awt.Point;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -37,13 +32,9 @@ public class A1Solution{
             rooms = configurationJSON.get("Rooms").toString();
             symbols = configurationJSON.get("Symbols").toString();
             
-
-
             // Extract the Rooms value from the file to get the file location for rooms
             
-
             // Extract the Symbols value from the file to get the file location for symbols-map
-
             
         } catch(FileNotFoundException e) {
             e.printStackTrace();
@@ -58,18 +49,16 @@ public class A1Solution{
 // instantiate a new Rogue object and call methods to do the required things
         
         ArrayList<Item> allItems = new ArrayList<Item>();
-        Rogue r = new Rogue();
-        Player p = new Player();
-        p.setName("Megh");
-        r.setPlayer(p);
-        r.createRooms(rooms);
-        r.setSymbols(symbols);
-        allItems = r.getItems();
-        ArrayList<Room> allRooms = r.getRooms();
+        Rogue rog = new Rogue();
+        Player pla = new Player();
+        pla.setName("AJ");
+        rog.setPlayer(pla);
+        rog.createRooms(rooms);
+        rog.setSymbols(symbols);
+        allItems = rog.getItems();
+        ArrayList<Room> allRooms = rog.getRooms();
 
-        System.out.println(r.displayAll());
-        
+        System.out.println(rog.displayAll());
     }
-
 
 }
